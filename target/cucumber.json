@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-01-30T00:36:27.201Z",
+        "start_timestamp": "2022-02-02T16:20:01.224Z",
         "before": [
           {
             "result": {
-              "duration": 4237000000,
+              "duration": 3956000000,
               "status": "passed"
             },
             "match": {
@@ -16,12 +16,13 @@
           }
         ],
         "line": 3,
-        "name": "Login with valid email and password",
+        "name": "Signup with valid credentials using data table",
         "description": "",
-        "id": "login-feature-test;login-with-valid-email-and-password",
+        "id": "sign-up-new-account-from-data-table;signup-with-valid-credentials-using-data-table",
         "after": [
           {
             "result": {
+              "duration": 2000000,
               "status": "passed"
             },
             "match": {
@@ -34,49 +35,25 @@
         "steps": [
           {
             "result": {
-              "duration": 24000000,
+              "duration": 26000000,
               "status": "passed"
             },
             "line": 4,
-            "name": "I am at TalentTEK Homepage",
+            "name": "User in a TalentTEK homepage",
             "match": {
-              "location": "stepDef.loginStep.iAmAtTalentTEKHomepage()"
+              "location": "stepDef.signUpStep.userInATalentTEKHomepage()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 83000000,
+              "duration": 420000000,
               "status": "passed"
             },
             "line": 5,
-            "name": "I enter a valid email address",
+            "name": "User click on New Account button",
             "match": {
-              "location": "stepDef.loginStep.iEnterAValidEmailAddress()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 102000000,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "I enter a valid password",
-            "match": {
-              "location": "stepDef.loginStep.iEnterAValidPassword()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 75000000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I click on Login Button",
-            "match": {
-              "location": "stepDef.loginStep.iClickOnLoginButton()"
+              "location": "stepDef.signUpStep.userClickOnNewAccountButton()"
             },
             "keyword": "When "
           },
@@ -84,35 +61,112 @@
             "result": {
               "status": "passed"
             },
-            "line": 8,
-            "name": "I should be able to successfully log in",
+            "line": 6,
+            "name": "user should land on Sign Pp page",
             "match": {
-              "location": "stepDef.profileStep.iShouldBeAbleToSuccessfullyLogIn()"
+              "location": "stepDef.signUpStep.userShouldLandOnSignPpPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1164000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user should fill out the information below",
+            "match": {
+              "location": "stepDef.signUpStep.userShouldFillOutTheInformationBelow(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "FirstName",
+                  "LastName",
+                  "Email",
+                  "Password",
+                  "ConfirmPassword",
+                  "Month",
+                  "Day",
+                  "Year"
+                ]
+              },
+              {
+                "cells": [
+                  "John",
+                  "Adams",
+                  "abc3@gmail.com",
+                  "abc1234",
+                  "abc1234",
+                  "Feb",
+                  "20",
+                  "1975"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 68000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user select the radio button for Gender",
+            "match": {
+              "location": "stepDef.signUpStep.userSelectTheRadioButtonForGender()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 68000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user click on checkbox for Agreement",
+            "match": {
+              "location": "stepDef.signUpStep.userClickOnCheckboxForAgreement()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 65000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user click on Create New account",
+            "match": {
+              "location": "stepDef.signUpStep.userClickOnCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 218000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user should be able to Create account successfully",
+            "match": {
+              "location": "stepDef.signUpStep.userShouldBeAbleToCreateAccountSuccessfully()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@login"
-          },
-          {
-            "name": "@smoke"
-          },
-          {
-            "name": "@regression"
-          },
-          {
-            "name": "@prePost"
+            "name": "@signUp"
           }
         ]
       }
     ],
-    "name": "Login Feature Test",
+    "name": "Sign up new account from Data Table",
     "description": "",
-    "id": "login-feature-test",
+    "id": "sign-up-new-account-from-data-table",
     "keyword": "Feature",
-    "uri": "file:src/test/java/features/login.feature",
+    "uri": "file:src/test/java/features/signUpByDataTable.feature",
     "tags": []
   }
 ]
